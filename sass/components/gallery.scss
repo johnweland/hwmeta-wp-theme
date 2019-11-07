@@ -1,0 +1,33 @@
+.blocks-gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+ul.blocks-gallery-grid {
+    padding:0;
+    list-style: none;
+}
+.blocks-gallery-item {
+    flex: 1 0 21%;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    & img {
+        object-fit: contain;
+    }
+
+    & figcaption {
+        margin-top: -3rem;
+        text-align: center;
+    }
+}
+.wp-block-image, .wp-blocks-gallery {
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    background-color: lighten($color-primary, 5%);
+    & figcaption {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}

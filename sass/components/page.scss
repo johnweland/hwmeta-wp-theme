@@ -1,0 +1,20 @@
+.page__heading {
+    padding: 2rem 0;
+    border-bottom: 2px solid lighten($color-primary, 5%);
+}
+.page__featured-image {
+    width: 100%;
+    object-fit: cover;
+}
+.page__share {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    & span:first-of-type {
+        margin-left: 2rem;
+    }
+    & .fab {
+        margin: auto .5rem;
+        font-size: 2.4rem;
+    }
+}

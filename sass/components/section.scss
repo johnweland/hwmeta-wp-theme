@@ -1,0 +1,16 @@
+section {
+    margin-top: 6rem;
+    border-bottom: 3px solid $color-secondary;
+
+    & h3 {
+        font-family: 'Montserrat', sans-serif;
+        & span {
+            padding: .5rem;
+            font-size: 2rem;
+            border-bottom: 3px solid $color-secondary;
+        }
+    }
+    &:last-of-type {
+        border-bottom: none;
+    }
+}

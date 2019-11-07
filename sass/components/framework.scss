@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.grid-container,
+.grid-container--x2,
+.grid-container--x3,
+.grid-container--x4,
+.wp-blocks-gallery.colums-3  {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 1.2rem;
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+footer {
+    margin-top: auto;
+    padding: 1.2rem;
+    font-size: 1.2rem;;
+    text-align: center;
+}
+
+@media screen and (min-width: 1033px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        &--x2 {
+            grid-template-columns: auto auto;
+        }
+        &--x3, .wp-block-gallery.colums-3, .block-gallery-grid {
+            grid-template-columns: auto auto auto;
+        }
+        &--x4 {
+            grid-template-columns: auto auto auto auto;
+        }
+    }
+}

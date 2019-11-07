@@ -1,0 +1,13 @@
+.wp-block-quote {
+    border-left: 2px solid $color-secondary;
+    background-color: lighten($color-primary, 5%);
+    margin-left: 2.4rem;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem;
+    & cite {
+        text-align: right;
+        &::before {
+            content: "-- ";
+        }
+    }
+}

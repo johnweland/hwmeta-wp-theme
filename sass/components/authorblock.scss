@@ -1,0 +1,21 @@
+.author-block {
+    display: flex;
+    margin: 1.2rem 0;
+    & img.author-block__image {
+        border: 2px solid $color-secondary;
+        border-radius: 50%;
+    }
+    & .author-block__meta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2rem;
+        margin-left: 1.2rem;
+        padding: 1.2rem;
+        border-left: 2px solid $color-secondary;
+        & p {
+            font-size: 2rem;
+            margin-bottom: unset;
+        }
+    }
+}
