@@ -36,7 +36,6 @@ function loadScripts(): void
 }
 add_action('wp_enqueue_scripts', 'loadScripts');
 
-
 // Enable Theme Support
 add_theme_support('menus');
 add_theme_support('post-thumbnails');

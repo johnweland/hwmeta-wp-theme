@@ -11,11 +11,7 @@
  */
 ?>
 
-<section>
 <?php get_template_part('includes/section', 'latest'); ?>
-
-<?php get_template_part('includes/section', 'hottest'); ?>
-</section>
 
 <div class="grid-container--x2">
 <div>
