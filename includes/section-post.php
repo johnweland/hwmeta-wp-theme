@@ -28,9 +28,9 @@
                 </p>
             </div>
         </div>
-        <div class="page__share">
-            share: <span class="fab fa-facebook"></span> <span class="fab fa-twitter"></span> <span class="fab fa-reddit"></span>
-        </div>
+        <?php if ( function_exists( 'sharing_display' ) ) : ?>
+    		<?php sharing_display( '', true ); ?>
+		<?php endif; ?>
     </div>
     <div class="grid-container--x2">
         <div class="post">

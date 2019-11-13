@@ -4,6 +4,10 @@ aside.widgetarea {
     min-width: 250px;
 
     & .widget {
+        margin: 0;
+        padding: 1.2rem;
         margin-bottom: 1.2rem;
+        list-style: none;
+        background-color: darken($color-primary, 5%);
     }
 }

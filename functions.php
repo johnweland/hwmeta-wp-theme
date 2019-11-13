@@ -75,3 +75,66 @@ function sidebars(): void
     );
 }
 add_action('widgets_init', 'sidebars');
+
+/**
+ * Remove Default share button locations
+ */
+function jptweakRemoveShare() {
+    remove_filter( 'the_content', 'sharing_display', 19 );
+    remove_filter( 'the_excerpt', 'sharing_display', 19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', [Jetpack_Likes::init(), 'post_likes'], 30, 1);
+    }
+}
+add_action( 'loop_start', 'jptweakRemoveShare' );
+
+/**
+ * Create Custom Post Statuses
+ */
+function custom_status_creation(){
+	register_post_status( 'editing', [
+		'label'                     => _x( 'Editing', 'post' ), // I used only minimum of parameters
+		'label_count'               => _n_noop( 'Editing <span class="count">(%s)</span>', 'Editing <span class="count">(%s)</span>'),
+		'public'                    => true
+    ]);
+    
+    register_post_status( 'revisions_needed', [
+		'label'                     => _x( 'Revisions Needed', 'post' ), // I used only minimum of parameters
+		'label_count'               => _n_noop( 'Revisions Needed <span class="count">(%s)</span>', 'Revisions Needed <span class="count">(%s)</span>'),
+		'public'                    => true
+    ]);
+}
+add_action( 'init', 'custom_status_creation' );
+
+add_action('admin_footer-edit.php','status_into_inline_edit');
+ 
+function status_into_inline_edit() { // ultra-simple example
+	echo "<script>
+	jQuery(document).ready( function() {
+		jQuery( 'select[name=\"_status\"]' ).append( '<option value=\"editing\">Editing</option>' );
+	});
+    </script>";
+    
+    echo "<script>
+	jQuery(document).ready( function() {
+		jQuery( 'select[name=\"_status\"]' ).append( '<option value=\"revisions_needed\">Revisions Needed</option>' );
+	});
+	</script>";
+}
+
+function display_status_label( $statuses ) {
+	global $post;
+	if( get_query_var( 'post_status' ) != 'editing' ) {
+		if( $post->post_status == 'editing' ){
+			return ['Editing']; 
+		}
+    }
+    if( get_query_var( 'post_status' ) != 'revisions_needed' ) {
+		if( $post->post_status == 'revisions_needed' ){
+			return ['Revisions Needed']; 
+		}
+	}
+	return $statuses;
+}
+ 
+add_filter( 'display_post_states', 'display_status_label' );

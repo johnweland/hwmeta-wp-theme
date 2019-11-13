@@ -1,0 +1,51 @@
+.comment-respond {
+    & input[type=text], textarea {
+        min-height: 3rem;
+        width: 100%;
+    }
+    & input, textarea {
+        padding: 1.2rem;;
+        border: 1px solid $color-secondary;
+        background-color: lighten($color-primary, 5%);
+        color: $text-primary;
+    }
+    & input[type=checkbox] {
+        margin-right: 1.2rem;
+    }
+    & input[type=submit] {
+        background-color: $color-secondary;
+        color: $color-primary;
+    }
+}
+.commentlist {
+    padding: 0;
+    list-style: none;
+    & ul, ol {
+        list-style: none;
+    }
+
+    & .comment-body {
+        padding: 1.2rem;
+        margin-bottom: 1.2rem;
+        border-left:2px solid $color-secondary;
+        background-color: lighten($color-primary, 5%);
+    }
+    & .vcard {
+        display: flex;
+        align-items: center;
+        & img {
+            border: 2px solid $color-secondary;
+            border-radius: 50%;
+            padding: .2rem;
+            min-width: 5rem;
+            height: auto;
+            margin-right: 1.2rem;
+        }
+        & .says {
+            margin-left: 1rem;
+        }
+    }
+    & .comment-meta {
+        margin-bottom: 1.2rem;
+    }
+}
