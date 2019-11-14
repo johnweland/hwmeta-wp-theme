@@ -18,7 +18,12 @@
             <img class="author-block__image" src="<?php echo get_avatar_url($user_email);?>">
             <div class="author-block__meta">
                 <p><a href="#"><?php the_author();?></a> | <?php the_date(); ?></p>
-                <p>Author Title</p>
+                <p>
+                    <?php 
+                        $user_id = get_the_author_meta('ID');
+                        $user_meta=get_userdata($user_id);
+                        $user_roles=$user_meta->roles; 
+                echo $user_roles[0] == 'administrator' ? ucfirst('author') : ucfirst($user_roles[0]); ?></p>
                 <p>
                 <?php if (get_the_author_meta('twitter')) : ?>
                 <a href="https://twitter.com/<?php the_author_meta('twitter');?>">

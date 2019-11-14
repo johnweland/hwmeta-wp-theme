@@ -44,7 +44,7 @@
         & li {
             line-height: 8rem;
             position: relative;
-            &.page_item_has_children {
+            &.page_item_has_children,  .menu-item-has-children {
                 & > a:after {
                     margin-left: 1.2rem;
                     font-family: "Font Awesome 5 Free";
@@ -52,13 +52,13 @@
                     content: "\f078";
                 }
             }
-            &:hover > .children {
+            &:hover > .children, &:hover > .sub-menu {
                 top: 8rem;
                 opacity: 1;
                 visibility: visible;
             }
         }
-        & .children {
+        & .children, .sub-menu {
             width: 20rem;
             display: block;
             position: absolute;
@@ -71,7 +71,7 @@
             transition: all 650ms ease;
             & li {
                 line-height: 4rem;
-                &:hover > .children {
+                &:hover > .children, &:hover > .sub-menu {
                     left: 100%;
                     top: 0;
                     opacity: 1;
@@ -86,7 +86,7 @@
                 border: 1.2rem solid transparent;
                 border-bottom-color: $color-secondary;
             }
-            & .children {
+            & .children, .sub-menu {
                 border-top: none;
                 border-left: 3px solid $color-secondary;
                 top: 0;
@@ -148,7 +148,7 @@
             & li {
                 line-height: 6rem;
             }
-            & .children {
+            & .children, .sub-menu {
                 position: initial;
                 border-top: none;
                 width: 100%;
@@ -157,11 +157,11 @@
                 &::before {
                     display: none;
                 }
-                & .children {
+                & .children, .sub-menu {
                     width: 100%;
                 }
             }
-            & li:hover > .children {
+            & li:hover > .children, li:hover > .sub-menu {
                 opacity: 1;
                 visibility: visible;
                 max-height: initial;

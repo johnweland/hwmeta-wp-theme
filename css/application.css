@@ -184,18 +184,18 @@ footer {
   line-height: 8rem;
   position: relative;
 }
-.navbar .nav-list li.page_item_has_children > a:after {
+.navbar .nav-list li.page_item_has_children > a:after, .navbar .nav-list li .menu-item-has-children > a:after {
   margin-left: 1.2rem;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
 }
-.navbar .nav-list li:hover > .children {
+.navbar .nav-list li:hover > .children, .navbar .nav-list li:hover > .sub-menu {
   top: 8rem;
   opacity: 1;
   visibility: visible;
 }
-.navbar .nav-list .children {
+.navbar .nav-list .children, .navbar .nav-list .sub-menu {
   width: 20rem;
   display: block;
   position: absolute;
@@ -207,16 +207,16 @@ footer {
   visibility: hidden;
   transition: all 650ms ease;
 }
-.navbar .nav-list .children li {
+.navbar .nav-list .children li, .navbar .nav-list .sub-menu li {
   line-height: 4rem;
 }
-.navbar .nav-list .children li:hover > .children {
+.navbar .nav-list .children li:hover > .children, .navbar .nav-list .children li:hover > .sub-menu, .navbar .nav-list .sub-menu li:hover > .children, .navbar .nav-list .sub-menu li:hover > .sub-menu {
   left: 100%;
   top: 0;
   opacity: 1;
   visibility: visible;
 }
-.navbar .nav-list .children::before {
+.navbar .nav-list .children::before, .navbar .nav-list .sub-menu::before {
   content: " ";
   position: absolute;
   top: -2.5rem;
@@ -224,13 +224,13 @@ footer {
   border: 1.2rem solid transparent;
   border-bottom-color: #fa9e00;
 }
-.navbar .nav-list .children .children {
+.navbar .nav-list .children .children, .navbar .nav-list .children .sub-menu, .navbar .nav-list .sub-menu .children, .navbar .nav-list .sub-menu .sub-menu {
   border-top: none;
   border-left: 3px solid #fa9e00;
   top: 0;
   left: 160%;
 }
-.navbar .nav-list .children .children::before {
+.navbar .nav-list .children .children::before, .navbar .nav-list .children .sub-menu::before, .navbar .nav-list .sub-menu .children::before, .navbar .nav-list .sub-menu .sub-menu::before {
   top: 0.9rem;
   left: -2.5rem;
   border: 1.2rem solid transparent;
@@ -283,20 +283,20 @@ footer {
   .navbar .nav-list li {
     line-height: 6rem;
   }
-  .navbar .nav-list .children {
+  .navbar .nav-list .children, .navbar .nav-list .sub-menu {
     position: initial;
     border-top: none;
     width: 100%;
     border-left: 3px solid #fa9e00;
     max-height: 0;
   }
-  .navbar .nav-list .children::before {
+  .navbar .nav-list .children::before, .navbar .nav-list .sub-menu::before {
     display: none;
   }
-  .navbar .nav-list .children .children {
+  .navbar .nav-list .children .children, .navbar .nav-list .children .sub-menu, .navbar .nav-list .sub-menu .children, .navbar .nav-list .sub-menu .sub-menu {
     width: 100%;
   }
-  .navbar .nav-list li:hover > .children {
+  .navbar .nav-list li:hover > .children, .navbar .nav-list li:hover > .sub-menu {
     opacity: 1;
     visibility: visible;
     max-height: initial;
