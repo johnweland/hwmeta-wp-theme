@@ -35,7 +35,7 @@ if ( $count > 0 ) {
         <!-- If they exist -->
         <?php if ($the_query->have_posts()) : ?>
         <section>
-        <h3 class="cards__category"><?php echo $popular_cats[$i]->slug; ?></h3>
+        <h3 class="cards__category"><?php echo ucfirst($popular_cats[$i]->slug); ?></h3>
         <div class="cards grid-container--x3">
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <!-- Post in Category Loop is finished -->
