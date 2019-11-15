@@ -21,11 +21,7 @@
         z-index: 1500;
     }
     & .brand {
-        display: flex;
-        max-width: 15rem;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
+        max-width: 8rem;
         & img {
             width: 100%;
             object-fit: cover;

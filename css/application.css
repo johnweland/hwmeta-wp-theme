@@ -159,11 +159,7 @@ footer {
   z-index: 1500;
 }
 .navbar .brand {
-  display: flex;
-  max-width: 15rem;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
+  max-width: 8rem;
 }
 .navbar .brand img {
   width: 100%;

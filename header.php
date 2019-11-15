@@ -11,7 +11,7 @@
 <div class="navbar">
     <nav class="nav container wide">
         <a class="brand" href="<?php echo get_site_url(); ?>">
-            <span class="fas fa-code"></span>
+            <img src="<?php echo get_template_directory_uri()?>/img/logo.png" />
         </a>
         <div class="menu-icons">
             <span class="fas fa-bars"></span>
