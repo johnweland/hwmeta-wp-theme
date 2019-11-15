@@ -4,6 +4,7 @@
         'hide_empty' => true,
         'taxonomy' => 'category',
         'fields'   => 'all',
+        'order' => 'RAND'
     ];
     ?>
 
@@ -12,7 +13,6 @@
 $count = count($cats);
 $popular_cats = [];
 if ( $count > 0 ) {
-
     foreach ( $cats as $term ) {
         if ($term->count >= 3) {
             array_push($popular_cats, $term);   

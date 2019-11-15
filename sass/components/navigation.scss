@@ -3,8 +3,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $color-primary;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    @extend .background;
     & .nav {
         display: flex;
         align-items: center;
@@ -36,7 +35,6 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-        background-color: $color-primary;
         & li {
             line-height: 8rem;
             position: relative;
@@ -131,6 +129,7 @@
             display: flex;
         }
         & .nav-list {
+            background-color: $color-primary;
             display: none;
             position: fixed;
             top: 0;

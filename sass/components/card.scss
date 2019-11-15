@@ -23,10 +23,10 @@
         max-height: 25rem;
         height: 25rem;
         object-fit: cover;
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        object-position: top;
+        transition: all 650ms ease;
+        &:hover {
+            object-position: bottom;
         }
     }
     & .card__meta {

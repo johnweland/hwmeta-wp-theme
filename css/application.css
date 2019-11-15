@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Lato|Roboto&display=swap';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
+.background, .navbar, body {
+  background: #5a5a5f;
+  background: linear-gradient(90deg, #4e4e52 0%, #5a5a5f 15%, #5a5a5f 85%, #4e4e52 100%);
+}
+
 *,
 *::before,
 *::after {
@@ -13,7 +18,7 @@ html {
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
   height: 100%;
-  background-color: #333333;
+  background-color: #5a5a5f;
 }
 
 body {
@@ -140,8 +145,6 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #333333;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .navbar .nav {
   display: flex;
@@ -174,7 +177,6 @@ footer {
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #333333;
 }
 .navbar .nav-list li {
   line-height: 8rem;
@@ -196,7 +198,7 @@ footer {
   display: block;
   position: absolute;
   border-top: 3px solid #fa9e00;
-  background-color: #1a1a1a;
+  background-color: #414145;
   z-index: 100;
   top: 16rem;
   opacity: 0;
@@ -266,6 +268,7 @@ footer {
     display: flex;
   }
   .navbar .nav-list {
+    background-color: #5a5a5f;
     display: none;
     position: fixed;
     top: 0;
@@ -308,7 +311,7 @@ aside.widgetarea .widget {
   padding: 1.2rem;
   margin-bottom: 1.2rem;
   list-style: none;
-  background-color: #262626;
+  background-color: #4e4e52;
 }
 
 section {
@@ -338,7 +341,7 @@ section:last-of-type {
   justify-content: flex-start;
 }
 .card.dark, .dark.card--right {
-  background-color: #262626;
+  background-color: #4e4e52;
 }
 .card .card__date, .card--right .card__date {
   font-size: 1.2rem;
@@ -352,11 +355,11 @@ section:last-of-type {
   max-height: 25rem;
   height: 25rem;
   object-fit: cover;
+  object-position: top;
+  transition: all 650ms ease;
 }
-.card .card__image img, .card--right .card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card .card__image:hover, .card--right .card__image:hover {
+  object-position: bottom;
 }
 .card .card__meta, .card--right .card__meta {
   padding: 1.2rem;
@@ -383,7 +386,7 @@ section:last-of-type {
 }
 .page__heading {
   padding: 2rem 0;
-  border-bottom: 2px solid #404040;
+  border-bottom: 2px solid #66666c;
 }
 
 .page__featured-image {
@@ -412,7 +415,7 @@ section:last-of-type {
   display: flex;
   flex-direction: column;
   margin-top: 1.2rem;
-  border-bottom: 2px solid #4d4d4d;
+  border-bottom: 2px solid #737379;
 }
 .post:first-of-type {
   margin-top: none;
@@ -480,7 +483,7 @@ section:last-of-type {
   margin-bottom: 1.2rem;
   padding: 1.2rem;
   list-style: none;
-  background-color: #404040;
+  background-color: #66666c;
 }
 
 .blocks-gallery-item, .wp-block-gallery.blocks-gallery-item {
@@ -499,7 +502,7 @@ figure.wp-block-image {
   width: fit-content;
   padding: 1.2rem;
   margin-bottom: 1.2rem;
-  background-color: #404040;
+  background-color: #66666c;
 }
 figure.wp-block-image figcaption {
   color: #eeeeee;
@@ -512,7 +515,7 @@ div.wp-block-image figure {
   width: fit-content;
   padding: 1.2rem;
   margin-bottom: 1.2rem;
-  background-color: #404040;
+  background-color: #66666c;
 }
 div.wp-block-image figure.alignleft {
   float: none;
@@ -531,7 +534,7 @@ div.wp-block-image figure.aligncenter {
   margin-right: auto;
 }
 div.wp-block-image figcaption {
-  background-color: #404040;
+  background-color: #66666c;
   color: #eeeeee;
   font-size: 1.6rem;
   font-weight: bold;
@@ -542,7 +545,7 @@ div.wp-block-image figcaption {
 
 .wp-block-quote {
   border-left: 2px solid #fa9e00;
-  background-color: #404040;
+  background-color: #66666c;
   margin-left: 2.4rem;
   margin-bottom: 1.2rem;
   padding: 1.2rem;
@@ -561,7 +564,7 @@ div.wp-block-image figcaption {
 .comment-respond input, .comment-respond textarea {
   padding: 1.2rem;
   border: 1px solid #fa9e00;
-  background-color: #404040;
+  background-color: #66666c;
   color: #eeeeee;
 }
 .comment-respond input[type=checkbox] {
@@ -569,7 +572,7 @@ div.wp-block-image figcaption {
 }
 .comment-respond input[type=submit] {
   background-color: #fa9e00;
-  color: #333333;
+  color: #5a5a5f;
 }
 
 .commentlist {
@@ -583,7 +586,7 @@ div.wp-block-image figcaption {
   padding: 1.2rem;
   margin-bottom: 1.2rem;
   border-left: 2px solid #fa9e00;
-  background-color: #404040;
+  background-color: #66666c;
 }
 .commentlist .vcard {
   display: flex;
