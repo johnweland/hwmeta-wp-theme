@@ -5,6 +5,10 @@
 .page__featured-image {
     width: 100%;
     object-fit: cover;
+    & img, source {
+        width: 100%;
+        object-fit: cover;   
+    }
 }
 .page__share {
     display: flex;
