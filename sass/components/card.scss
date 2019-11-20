@@ -1,6 +1,3 @@
-.cards.grid-container--x2 {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-}
 .card {
     display: flex;
     flex-direction: column;
@@ -41,7 +38,11 @@
     }
 
 }
-
+@media screen and (min-width: 1033px) {
+    .cards.grid-container--x2 {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+}
 @media screen and (min-width: 1280px) {
     .card--right {
         flex-direction: row;

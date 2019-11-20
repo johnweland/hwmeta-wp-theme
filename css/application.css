@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 html {
@@ -145,6 +146,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+  box-shadow: 0px 5px 20px 0px #4e4e52;
+  z-index: 2000;
 }
 .navbar .nav {
   display: flex;
@@ -159,7 +162,7 @@ footer {
   color: #eeeeee;
   font-size: 4rem;
   cursor: pointer;
-  z-index: 1500;
+  z-index: 2500;
 }
 .navbar .brand {
   max-width: 8rem;
@@ -177,6 +180,7 @@ footer {
   width: 100%;
   align-items: center;
   justify-content: center;
+  z-index: 2000;
 }
 .navbar .nav-list li {
   line-height: 8rem;
@@ -199,7 +203,7 @@ footer {
   position: absolute;
   border-top: 3px solid #fa9e00;
   background-color: #414145;
-  z-index: 100;
+  z-index: 2100;
   top: 16rem;
   opacity: 0;
   visibility: hidden;
@@ -277,7 +281,7 @@ footer {
     flex-direction: column;
     align-items: initial;
     justify-content: initial;
-    z-index: 100;
+    z-index: 2000;
   }
   .navbar .nav-list li {
     line-height: 6rem;
@@ -331,10 +335,6 @@ section:last-of-type {
   border-bottom: none;
 }
 
-.cards.grid-container--x2 {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-}
-
 .card, .card--right {
   display: flex;
   flex-direction: column;
@@ -372,6 +372,11 @@ section:last-of-type {
   border-left: 2px solid #fa9e00;
 }
 
+@media screen and (min-width: 1033px) {
+  .cards.grid-container--x2 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
 @media screen and (min-width: 1280px) {
   .card--right {
     flex-direction: row;
@@ -465,10 +470,10 @@ section:last-of-type {
   display: flex;
   margin: 1.2rem 0;
 }
-.author-block img.author-block__image {
-  border: 2px solid #fa9e00;
-  border-radius: 50%;
+.author-block .author-block__image img {
   padding: 0.8rem;
+  border-radius: 50%;
+  border: 2px solid #fa9e00;
 }
 .author-block .author-block__meta {
   display: flex;
@@ -613,6 +618,21 @@ div.wp-block-image figcaption {
 }
 .commentlist .comment-meta {
   margin-bottom: 1.2rem;
+}
+
+table {
+  width: 100%;
+  font-size: 1.6rem;
+  margin-bottom: 2.2rem;
+}
+
+.wp-block-table.is-style-stripes {
+  border-bottom: none;
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: #bbbbbb;
+  color: #333;
 }
 
 /*

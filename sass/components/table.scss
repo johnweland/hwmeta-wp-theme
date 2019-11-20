@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+    font-size: 1.6rem;
+    margin-bottom: 2.2rem;
+}
+
+.wp-block-table {}
+
+.wp-block-table.is-style-stripes {
+    border-bottom: none;
+}
+
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+    background-color: #bbbbbb;
+    color: #333;
+}

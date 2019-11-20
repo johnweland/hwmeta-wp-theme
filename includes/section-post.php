@@ -15,7 +15,9 @@
         <img class="page__featured-image" src="<?php the_post_thumbnail_url();?>">
         <div class="author-block">
             <?php $user_email = get_the_author_meta('user_email'); ?>
-            <img class="author-block__image" src="<?php echo get_avatar_url($user_email);?>">
+            <div class="author-block__image">
+                <img src="<?php echo get_avatar_url($user_email);?>">
+            </div>
             <div class="author-block__meta">
                 <p><a href="#"><?php the_author();?></a> | <?php the_date(); ?></p>
                 <p>

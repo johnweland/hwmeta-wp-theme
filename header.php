@@ -11,7 +11,7 @@
 <div class="navbar">
     <nav class="nav container wide">
         <a class="brand" href="<?php echo get_site_url(); ?>">
-            <img src="<?php echo get_template_directory_uri()?>/img/logo.png" />
+            <img src="<?php echo get_template_directory_uri()?>/img/logo.png" alt="<?php echo get_bloginfo('name');  ?>"/> 
         </a>
         <div class="menu-icons">
             <span class="fas fa-bars"></span>
