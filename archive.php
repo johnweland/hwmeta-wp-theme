@@ -14,10 +14,7 @@
 <main class="container">
     <div class="grid-container">
         <h1 class="page__heading">
-        <?php
-        $category = get_the_category();
-        echo $category[0]->cat_name . ' '; 
-        ?>
+        <?php single_cat_title(); ?>
         </h1>
     </div>
     <div class="grid-container--x2">

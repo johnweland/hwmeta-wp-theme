@@ -20,7 +20,7 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     color: $text-primary;
-    @extend .background;
+    background: linear-gradient(90deg, rgba(darken($color-primary, 5%), .95) 0%, rgba($color-primary, .95) 15%, rgba($color-primary, .95) 85%, rgba(darken($color-primary, 5%), .95) 100%), url('../img/circuit.png');
 }
 main {
     margin-top: 10rem !important;

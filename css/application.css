@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import 'https://fonts.googleapis.com/css?family=Montserrat|Lato|Roboto&display=swap';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css';
-.background, .navbar, body {
+.background, .navbar {
   background: #5a5a5f;
   background: linear-gradient(90deg, #4e4e52 0%, #5a5a5f 15%, #5a5a5f 85%, #4e4e52 100%);
 }
@@ -30,6 +30,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   color: #eeeeee;
+  background: linear-gradient(90deg, rgba(78, 78, 82, 0.95) 0%, rgba(90, 90, 95, 0.95) 15%, rgba(90, 90, 95, 0.95) 85%, rgba(78, 78, 82, 0.95) 100%), url("../img/circuit.png");
 }
 
 main {
@@ -165,7 +166,7 @@ footer {
   z-index: 2500;
 }
 .navbar .brand {
-  max-width: 8rem;
+  max-width: 20rem;
 }
 .navbar .brand img {
   width: 100%;
@@ -469,6 +470,14 @@ section:last-of-type {
 .author-block {
   display: flex;
   margin: 1.2rem 0;
+  background: linear-gradient(90deg, rgba(78, 78, 82, 0) 0%, #4e4e52 15%, #4e4e52 85%, rgba(78, 78, 82, 0) 100%);
+  padding: 5rem 1.2rem 5rem 1.2rem;
+  border-top: 2px solid #fa9e00;
+  border-bottom: 2px solid #fa9e00;
+}
+.author-block .author-block__image {
+  width: 11.6rem;
+  height: 11.6rem;
 }
 .author-block .author-block__image img {
   padding: 0.8rem;

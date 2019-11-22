@@ -1,3 +1,15 @@
+<?php
+/**
+ * Content Template for Latest Posts
+ * php version 7.3
+ * 
+ * @category Components
+ * @package  WordPress
+ * @author   John Weland <john.weland@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://hwmeta.com
+ */
+?>
 <section>
 <!-- Get the latests 2 posts -->
 <?php

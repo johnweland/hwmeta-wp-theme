@@ -7,7 +7,7 @@
  * @package  WordPress
  * @author   John Weland <john.weland@gmail.com>
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link     https://websiteurl.tld
+ * @link     https://hwmeta.com
  */
 ?>
 
@@ -17,9 +17,9 @@
 <div>
 <?php get_template_part('includes/section', 'popular'); ?>
 </div>
-<?php if (is_active_sidebar('post-sidebar')) : ?>
+<?php if (is_active_sidebar('main-sidebar')) : ?>
 <aside class="widgetarea">
-    <?php dynamic_sidebar('post-sidebar');?>
+    <?php dynamic_sidebar('main-sidebar');?>
 </aside>
 <?php endif; ?>
 </div>

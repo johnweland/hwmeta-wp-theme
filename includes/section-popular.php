@@ -1,3 +1,15 @@
+<?php
+/**
+ * Content Template for Popular Posts
+ * php version 7.3
+ * 
+ * @category Components
+ * @package  WordPress
+ * @author   John Weland <john.weland@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://hwmeta.com
+ */
+?>
 <!-- Get top 3 popular categoies regardless if POST exsist in loops above (currently has no output) -->
 <?php
     $cat_args = [

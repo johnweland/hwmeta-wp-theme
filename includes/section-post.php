@@ -7,7 +7,7 @@
  * @package  WordPress
  * @author   John Weland <john.weland@gmail.com>
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
- * @link     https://websiteurl.tld
+ * @link     https://hwmeta.com
  */
 ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -23,9 +23,9 @@
                 <p>
                     <?php 
                         $user_id = get_the_author_meta('ID');
-                        $user_meta=get_userdata($user_id);
-                        $user_roles=$user_meta->roles; 
-                echo $user_roles[0] == 'administrator' ? ucfirst('author') : ucfirst($user_roles[0]); ?></p>
+                        $user_meta = get_userdata($user_id);
+                        $user_role= str_replace("_", " ", $user_meta->roles[0]);
+                echo $user_role == 'administrator' ? ucwords('author') : ucwords($user_role); ?></p>
                 <p>
                 <?php if (get_the_author_meta('twitter')) : ?>
                 <a href="https://twitter.com/<?php the_author_meta('twitter');?>">
