@@ -30,7 +30,7 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   color: #eeeeee;
-  background: linear-gradient(90deg, rgba(78, 78, 82, 0.95) 0%, rgba(90, 90, 95, 0.95) 15%, rgba(90, 90, 95, 0.95) 85%, rgba(78, 78, 82, 0.95) 100%), url("../img/circuit.png");
+  background: linear-gradient(90deg, rgba(78, 78, 82, 0.95) 0%, rgba(90, 90, 95, 0.95) 15%, rgba(90, 90, 95, 0.95) 85%, rgba(78, 78, 82, 0.95) 100%), top left/800px url("../img/pcbbg1.png") repeat-y, bottom right/800px url("../img/pcbbg1-reverse.png") repeat-y, url("../img/circuit.png");
 }
 
 main {
